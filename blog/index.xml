@@ -44,12 +44,15 @@ this next car as long as you like, and it will &lt;strong&gt;never&lt;/strong&gt
     </item>
     
     <item>
-      <title>Carrots</title>
-      <link>https://jorgenmiller.github.io/blog/carrots/</link>
-      <pubDate>Tue, 17 Jan 2017 23:07:52 -0400</pubDate>
+      <title>Blog Post</title>
+      <link>https://jorgenmiller.github.io/blog/blog-post/</link>
+      <pubDate>Sat, 18 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jorgenmiller.github.io/blog/carrots/</guid>
-      <description>&lt;p&gt;Hello mt name is jorgen and i lik&lt;/p&gt;
+      <guid>https://jorgenmiller.github.io/blog/blog-post/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Deploy&lt;/strong&gt;
+cd; cd Projects; cd blog-hugo; ./deploy.sh
+&lt;em&gt;username&lt;/em&gt;
+&lt;em&gt;password&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
