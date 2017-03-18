@@ -49,7 +49,19 @@ this next car as long as you like, and it will &lt;strong&gt;never&lt;/strong&gt
       <pubDate>Sat, 18 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://jorgenmiller.github.io/blog/blog-post/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Deploy&lt;/strong&gt;&lt;/p&gt;
+      <description>
+
+&lt;h2 id=&#34;infos&#34;&gt;Infos&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Edit&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Edit all pages in atom&lt;/li&gt;
+&lt;li&gt;Blog&lt;/li&gt;
+&lt;li&gt;Fixed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Deploy&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;cd; cd Projects; cd blog-hugo; ./deploy.sh&lt;/li&gt;
@@ -57,9 +69,19 @@ this next car as long as you like, and it will &lt;strong&gt;never&lt;/strong&gt
 &lt;li&gt;&lt;em&gt;password&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Test&lt;/strong&gt;
-- cd; cd Projects; cd blog-hugo; ./test.sh
-- Ctrl+C&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Test&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cd; cd Projects; cd blog-hugo; ./test.sh&lt;/li&gt;
+&lt;li&gt;Ctrl+C&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Configurations&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cd; cd Projects; cd blog-hugo; cat config.toml&lt;/li&gt;
+&lt;li&gt;Edit in atom&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
