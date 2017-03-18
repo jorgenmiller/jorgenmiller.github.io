@@ -44,11 +44,11 @@ this next car as long as you like, and it will &lt;strong&gt;never&lt;/strong&gt
     </item>
     
     <item>
-      <title>Test Post</title>
-      <link>https://jorgenmiller.github.io/blog/test-post/</link>
+      <title>Test Post 2</title>
+      <link>https://jorgenmiller.github.io/blog/test-post-2/</link>
       <pubDate>Tue, 17 Jan 2017 23:07:52 -0400</pubDate>
       
-      <guid>https://jorgenmiller.github.io/blog/test-post/</guid>
+      <guid>https://jorgenmiller.github.io/blog/test-post-2/</guid>
       <description>&lt;p&gt;Axels are simple sometimes. But other times &lt;strong&gt;they are hard&lt;/strong&gt;. They need to:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -60,20 +60,6 @@ this next car as long as you like, and it will &lt;strong&gt;never&lt;/strong&gt
 &lt;p&gt;&lt;em&gt;Here&amp;rsquo;s an example of what &lt;del&gt;not&lt;/del&gt; to do:&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/optgif.gif&#34; alt=&#34;Cool car&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can tell it&amp;rsquo;s &lt;del&gt;not&lt;/del&gt; good because the car wiggles. But you can stare at
-this next car as long as you like, and it will &lt;strong&gt;never&lt;/strong&gt; wiggle.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/car.jpg&#34; alt=&#34;Cool car&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TODO:&lt;/p&gt;
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; fix typos&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; cross out &lt;del&gt;stuff&lt;/del&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;//johannmiller.com&#34;&gt;This is a great link btw&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
