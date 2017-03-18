@@ -1,3 +1,4 @@
+publishDir          = "docs"
 baseurl             = "https://jorgenmiller.surge.sh/"
 builddrafts         = false
 canonifyurls        = true
