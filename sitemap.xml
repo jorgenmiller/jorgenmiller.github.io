@@ -2,18 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jorgenmiller.github.io/about/</loc>
-    <lastmod>2017-03-17T23:39:34-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jorgenmiller.github.io/blog/building-axels-with-legos/</loc>
     <lastmod>2017-03-17T23:07:52-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jorgenmiller.github.io/blog/blog-post/</loc>
+    <loc>https://jorgenmiller.github.io/blog/information/</loc>
     <lastmod>2017-03-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgenmiller.github.io/about/</loc>
+    <lastmod>2017-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgenmiller.github.io/blog/example/</loc>
+    <lastmod>2002-04-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgenmiller.github.io/blog/example/</loc>
+    <lastmod>2002-04-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -24,13 +34,13 @@
   
   <url>
     <loc>https://jorgenmiller.github.io/fixed/</loc>
-    <lastmod>2017-03-17T23:39:34-04:00</lastmod>
+    <lastmod>2017-03-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jorgenmiller.github.io/</loc>
-    <lastmod>2017-03-17T23:39:34-04:00</lastmod>
+    <lastmod>2017-03-17T23:07:52-04:00</lastmod>
     <priority>0</priority>
   </url>
   
