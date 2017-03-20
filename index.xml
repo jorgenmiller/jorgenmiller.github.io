@@ -6,8 +6,29 @@
     <description>Recent content on Jørgen Miller</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 17 Mar 2017 23:07:52 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 19 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jorgenmiller.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Programming NXT with Enchanting</title>
+      <link>https://jorgenmiller.github.io/blog/programming-nxt-with-enchanting/</link>
+      <pubDate>Sun, 19 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/programming-nxt-with-enchanting/</guid>
+      <description>&lt;p&gt;NXT mindstorms are a product of Lego. They are motors and sensors that are controlled by an intelligent brick. The brick comes with NXT-G, a drag and drop style program made by Lego. Personally, I do not like NXT-G. There are a few programming alternatives.&lt;/p&gt;
+
+&lt;p&gt;Enchanting is a scratch based language that I have used to control my Mindstorms. Anyone who has used scratch might find Enchanting to be easier to use than NXT-G.&lt;/p&gt;
+
+&lt;p&gt;Here are a few programs able to control Mindstorms:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NXT-G&lt;/li&gt;
+&lt;li&gt;Enchanting&lt;/li&gt;
+&lt;li&gt;NXJ (Java based)&lt;/li&gt;
+&lt;li&gt;ICON (completely on brick)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Building Axels with Legos</title>
@@ -50,16 +71,6 @@ this next car as long as you like, and it will &lt;strong&gt;never&lt;/strong&gt
       
       <guid>https://jorgenmiller.github.io/about/</guid>
       <description>&lt;p&gt;I spend my time building robots, legos, and friendships :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Post</title>
-      <link>https://jorgenmiller.github.io/blog/post/</link>
-      <pubDate>Mon, 29 Apr 2002 00:00:00 +0000</pubDate>
-      
-      <guid>https://jorgenmiller.github.io/blog/post/</guid>
-      <description>&lt;p&gt;Start here&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
