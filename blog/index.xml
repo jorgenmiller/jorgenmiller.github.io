@@ -10,57 +10,27 @@
     <atom:link href="https://jorgenmiller.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Programming NXT with Enchanting</title>
-      <link>https://jorgenmiller.github.io/blog/programming-nxt-with-enchanting/</link>
+      <title>NXT Programming Alternatives</title>
+      <link>https://jorgenmiller.github.io/blog/nxt-programming-alternatives/</link>
       <pubDate>Sun, 19 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jorgenmiller.github.io/blog/programming-nxt-with-enchanting/</guid>
-      <description>&lt;p&gt;NXT mindstorms are a product of Lego. They are motors and sensors that are controlled by an intelligent brick. The brick comes with NXT-G, a drag and drop style program made by Lego. Personally, I do not like NXT-G. There are a few programming alternatives.&lt;/p&gt;
+      <guid>https://jorgenmiller.github.io/blog/nxt-programming-alternatives/</guid>
+      <description>&lt;p&gt;NXT mindstorms are Lego compatible motors and sensors that are controlled by an intelligent brick. The brick comes with NXT-G, a drag and drop style program.&lt;/p&gt;
 
-&lt;p&gt;Enchanting is a scratch based language that I have used to control my Mindstorms. Anyone who has used scratch might find Enchanting to be easier to use than NXT-G.&lt;/p&gt;
-
-&lt;p&gt;Here are a few programs able to control Mindstorms:&lt;/p&gt;
+&lt;p&gt;Personally, I do not like NXT-G.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;NXT-G&lt;/li&gt;
-&lt;li&gt;Enchanting&lt;/li&gt;
-&lt;li&gt;NXJ (Java based)&lt;/li&gt;
-&lt;li&gt;ICON (completely on brick)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Building Axels with Legos</title>
-      <link>https://jorgenmiller.github.io/blog/building-axels-with-legos/</link>
-      <pubDate>Fri, 17 Mar 2017 23:07:52 -0400</pubDate>
-      
-      <guid>https://jorgenmiller.github.io/blog/building-axels-with-legos/</guid>
-      <description>&lt;p&gt;Axels are simple sometimes. But other times &lt;strong&gt;they are hard&lt;/strong&gt;. They need to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;support the weight of the vehicle&lt;/li&gt;
-&lt;li&gt;turn&lt;/li&gt;
-&lt;li&gt;do other stuff&lt;/li&gt;
+&lt;li&gt;reasons
+-&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;Here&amp;rsquo;s an example of what &lt;del&gt;not&lt;/del&gt; to do:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There are a few programming alternatives.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/optgif.gif&#34; alt=&#34;Cool car&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;//http://enchanting.robotclub.ab.ca/tiki-index.php&#34;&gt;Enchanting&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;You can tell it&amp;rsquo;s &lt;del&gt;not&lt;/del&gt; good because the car wiggles. But you can stare at
-this next car as long as you like, and it will &lt;strong&gt;never&lt;/strong&gt; wiggle.&lt;/p&gt;
+&lt;p&gt;NXJ&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/car.jpg&#34; alt=&#34;Cool car&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TODO:&lt;/p&gt;
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; fix typos&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; cross out &lt;del&gt;stuff&lt;/del&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;//johannmiller.com&#34;&gt;This is a great link btw&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ICON&lt;/p&gt;
 </description>
     </item>
     
