@@ -15,22 +15,23 @@
       <pubDate>Sun, 19 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://jorgenmiller.github.io/blog/nxt-programming-alternatives/</guid>
-      <description>&lt;p&gt;NXT mindstorms are Lego compatible motors and sensors that are controlled by an intelligent brick. The brick comes with NXT-G, a drag and drop style program.&lt;/p&gt;
+      <description>&lt;p&gt;NXT mindstorms are Lego compatible motors and sensors that are controlled by an intelligent brick. The brick comes with &lt;a href=&#34;https://www.lego.com/en-us/mindstorms/downloads/nxt-software-download&#34;&gt;NXT-G&lt;/a&gt;, a drag and drop style program.&lt;/p&gt;
 
 &lt;p&gt;Personally, I do not like NXT-G.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;reasons
--&lt;/li&gt;
+&lt;li&gt;1 reasons&lt;/li&gt;
+&lt;li&gt;2&lt;/li&gt;
+&lt;li&gt;3&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;There are a few programming alternatives.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;//http://enchanting.robotclub.ab.ca/tiki-index.php&#34;&gt;Enchanting&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://enchanting.robotclub.ab.ca/tiki-index.php&#34;&gt;Enchanting&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;NXJ&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.lejos.org/nxj.php&#34;&gt;NXJ&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;ICON&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.teamhassenplug.org/NXT/ICON/&#34;&gt;ICON&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
