@@ -34,7 +34,7 @@
 
 &lt;p&gt;In total, the arm would rotate its base with one motor, extend the end of the arm with another motor, and complete a task (like grabbing an object) with another motor. The arm only uses three motors to move around its area and activate the end effector.&lt;/p&gt;
 
-&lt;p&gt;Here is a Lego Arm that i built that functions using this principle.&lt;/p&gt;
+&lt;p&gt;Here is a Lego Arm that I built that functions using this principle.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/threemotorarm.jpg&#34; alt=&#34;Three motors in a Lego arm&#34; /&gt;&lt;/p&gt;
 </description>
