@@ -15,7 +15,7 @@
       <pubDate>Wed, 05 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://jorgenmiller.github.io/blog/robotic-arm-three-motor-principle/</guid>
-      <description>&lt;p&gt;Robotic Arms are fun to build and can complete many different tasks. For a full three dimensional movement, six controlled joints are required. Usually, they are arranged some what like this:&lt;/p&gt;
+      <description>&lt;p&gt;Robotic Arms are fun to build and can complete many different tasks. For a full three dimensional movement, six controlled joints are required. Usually, they are arranged some what like this.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/picture.jpg&#34; alt=&#34;Six motor control of a robotic arm&#34; /&gt;&lt;/p&gt;
 
@@ -26,7 +26,7 @@
 - the two base angles are free to rotate
 - the top angle is controlled by a servo&lt;/p&gt;
 
-&lt;p&gt;In this triangle, when the top angle is changed, the bottom side of the triangle decreases or increases. The two base angles will also change. The amount it changes depends on the lengths of the sides.&lt;/p&gt;
+&lt;p&gt;In this triangle, when the top angle is changed, the bottom side of the triangle decreases or increase and the two base angles will also change. The amount that the bottom side changes depends on the lengths of the sides.&lt;/p&gt;
 
 &lt;p&gt;In a robotic Arm, it would look like this.&lt;/p&gt;
 
@@ -72,7 +72,7 @@
       <pubDate>Mon, 29 Apr 2002 00:00:00 +0000</pubDate>
       
       <guid>https://jorgenmiller.github.io/blog/science-fair-2017/</guid>
-      <description>&lt;p&gt;&lt;em&gt;content&lt;/em&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;em&gt;content.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
