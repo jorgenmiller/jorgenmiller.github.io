@@ -13,10 +13,10 @@
 <title>
 
 
-     Science Fair 2017 
+     Robotic Arm Three Motor Principle 
 
 </title>
-<link rel="canonical" href="https://jorgenmiller.github.io/blog/science-fair-2017/">
+<link rel="canonical" href="https://jorgenmiller.github.io/blog/robotic-arm-three-motor-principle/">
 
 
 
@@ -111,7 +111,7 @@
                 <div class="title-container">
                     <div class="page-heading">
 
-    Science Fair 2017
+    Robotic Arm Three Motor Principle
 
 </div>
 
@@ -119,13 +119,34 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Mon Apr 29 2002 00:00:00 UTC'>Apr 29, 2002</div>
+                    <div class="date" title='Wed Apr 5 2017 00:00:00 UTC'>Apr 5, 2017</div>
                     
                     
                 </div>
             </div>
             <div class="markdown">
-                <p><em>content</em></p>
+                <p>Robotic Arms are fun to build and can complete many different tasks. For a full three dimensional movement, six controlled joints are required. Usually, they are arranged some what like this:</p>
+
+<p><img src="https://jorgenmiller.github.io/blog_imgs/picture.gif" alt="Six motor control of a robotic arm" /></p>
+
+<p>Six servos can be a lot of motors to control. Sometimes it is excessive. In my <a href="https://jorgenmiller.github.io/blog/science-fair-2017/">Science Fair project in 2017</a>, there was not a need to move upwards. Also, NXT can only support three motors (without brick-to-brick communication). I made a design that requires only three motors to move the end of the arm in a two dimensional plane.</p>
+
+<p>This Lego arm is controlled by only three motors. This design functions when the arm makes a triangle where
+- Two side lengths stay the same, but not necessarily equivalent
+- the two base angles are free to rotate
+- the top angle is controlled by a servo</p>
+
+<p>In this triangle, when the top angle is changed, the bottom side of the triangle decreases or increases. The two base angles will also change. The amount it changes depends on the lengths of the sides.</p>
+
+<p>In a robotic Arm, it would look like this.</p>
+
+<p><img src="https://jorgenmiller.github.io/blog_imgs/picture.gif" alt="Three motor control of a robotic arm" /></p>
+
+<p>In total, the arm would rotate its base with one motor, extend the end of the arm with another motor, and complete a task (like grabbing an object) with another motor. The arm only uses three motors to move around its area and activate the end effector.</p>
+
+<p>Here is a Lego Arm that functions using this principle.</p>
+
+<p><img src="https://jorgenmiller.github.io/blog_imgs/ThreeMotorArm.JPG" alt="Three motor Lego arm" /></p>
 
                 <br>
                 <p><a href="https://jorgenmiller.github.io/blog/">Back to posts</a></p>
@@ -135,9 +156,9 @@
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'jorgenmiller';
-    var disqus_identifier = 'https:\/\/jorgenmiller.github.io\/blog\/science-fair-2017\/';
-    var disqus_title = 'Science Fair 2017';
-    var disqus_url = 'https:\/\/jorgenmiller.github.io\/blog\/science-fair-2017\/';
+    var disqus_identifier = 'https:\/\/jorgenmiller.github.io\/blog\/robotic-arm-three-motor-principle\/';
+    var disqus_title = 'Robotic Arm Three Motor Principle';
+    var disqus_url = 'https:\/\/jorgenmiller.github.io\/blog\/robotic-arm-three-motor-principle\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

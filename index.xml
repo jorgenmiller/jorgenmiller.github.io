@@ -10,11 +10,11 @@
     <atom:link href="https://jorgenmiller.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Robotic Arm v1 and v2</title>
-      <link>https://jorgenmiller.github.io/blog/robotic-arm-v1-and-v2/</link>
+      <title>Robotic Arm Three Motor Principle</title>
+      <link>https://jorgenmiller.github.io/blog/robotic-arm-three-motor-principle/</link>
       <pubDate>Wed, 05 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jorgenmiller.github.io/blog/robotic-arm-v1-and-v2/</guid>
+      <guid>https://jorgenmiller.github.io/blog/robotic-arm-three-motor-principle/</guid>
       <description>&lt;p&gt;Robotic Arms are fun to build and can complete many different tasks. For a full three dimensional movement, six controlled joints are required. Usually, they are arranged some what like this:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/picture.gif&#34; alt=&#34;Six motor control of a robotic arm&#34; /&gt;&lt;/p&gt;
