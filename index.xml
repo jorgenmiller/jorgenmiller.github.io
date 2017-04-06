@@ -17,7 +17,7 @@
       <guid>https://jorgenmiller.github.io/blog/robotic-arm-three-motor-principle/</guid>
       <description>&lt;p&gt;Robotic Arms are fun to build and can complete many different tasks. For a full three dimensional movement, six controlled joints are required. Usually, they are arranged some what like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/picture.gif&#34; alt=&#34;Six motor control of a robotic arm&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/picture.jpg&#34; alt=&#34;Six motor control of a robotic arm&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Six servos can be a lot of motors to control. Sometimes it is excessive. In my &lt;a href=&#34;https://jorgenmiller.github.io/blog/science-fair-2017/&#34;&gt;Science Fair project in 2017&lt;/a&gt;, there was not a need to move upwards. Also, NXT can only support three motors (without brick-to-brick communication). I made a design that requires only three motors to move the end of the arm in a two dimensional plane.&lt;/p&gt;
 
@@ -30,13 +30,13 @@
 
 &lt;p&gt;In a robotic Arm, it would look like this.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/picture.gif&#34; alt=&#34;Three motor control of a robotic arm&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/picture.jpg&#34; alt=&#34;Three motor control of a robotic arm&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In total, the arm would rotate its base with one motor, extend the end of the arm with another motor, and complete a task (like grabbing an object) with another motor. The arm only uses three motors to move around its area and activate the end effector.&lt;/p&gt;
 
 &lt;p&gt;Here is a Lego Arm that functions using this principle.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/ThreeMotorArm.JPG&#34; alt=&#34;Three motor Lego arm&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/ThreeMotorArm.jpg&#34; alt=&#34;Three motor Lego arm&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
