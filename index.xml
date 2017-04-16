@@ -21,10 +21,13 @@
 
 &lt;p&gt;Six servos can be a lot of motors to control. Sometimes it is excessive. In my &lt;a href=&#34;https://jorgenmiller.github.io/blog/science-fair-2017/&#34;&gt;Science Fair project in 2017&lt;/a&gt;, there was not a need to move upwards. Also, NXT can only support three motors (without brick-to-brick communication). I made a design that requires only three motors to move the end of the arm in a two dimensional plane.&lt;/p&gt;
 
-&lt;p&gt;This Lego arm is controlled by only three motors. This design functions when the arm makes a triangle where
-- Two side lengths stay the same, but not necessarily equivalent
-- the two base angles are free to rotate
-- the top angle is controlled by a servo&lt;/p&gt;
+&lt;p&gt;This Lego arm is controlled by only three motors. This design functions when the arm makes a triangle where&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Two side lengths stay the same, but not necessarily equivalent&lt;/li&gt;
+&lt;li&gt;the two base angles are free to rotate&lt;/li&gt;
+&lt;li&gt;the top angle is controlled by a servo&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;In this triangle, when the top angle is changed, the bottom side of the triangle decreases or increase and the two base angles will also change. The amount that the bottom side changes depends on the lengths of the sides.&lt;/p&gt;
 
@@ -37,6 +40,8 @@
 &lt;p&gt;Here is a Lego Arm that I built that functions using this principle.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/threemotorarm.jpg&#34; alt=&#34;Three motors in a Lego arm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This arm only uses three motors and has two joints that are free to rotate.&lt;/p&gt;
 </description>
     </item>
     
@@ -75,6 +80,16 @@
       <description>&lt;p&gt;I spend my time building robots, legos, and friendships :)&lt;/p&gt;
 
 &lt;p&gt;jorgen.j.miller@gmail.com&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Science Fair 2017</title>
+      <link>https://jorgenmiller.github.io/blog/science-fair-2017/</link>
+      <pubDate>Mon, 29 Apr 2002 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/science-fair-2017/</guid>
+      <description>&lt;p&gt;&lt;em&gt;content.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
