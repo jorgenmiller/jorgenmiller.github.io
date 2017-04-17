@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Exploits with robots.">
+
+<title>
+
+
+     The Lego XL Motor 
+
+</title>
+<link rel="canonical" href="https://jorgenmiller.github.io/blog/the-lego-xl-motor/">
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/reset.css?t=1492435597">
+    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/pygments.css?t=1492435597">
+    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/main.css?t=1492435597">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://jorgenmiller.github.io/img/favicon.ico"
+
+>
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+              <a href="https://jorgenmiller.github.io/"><img class="avatar" src="https://jorgenmiller.github.io/profile.jpg" /></a>
+            
+            <a href="https://jorgenmiller.github.io/"><div class="name">Jørgen Miller</div></a>
+            
+            <nav>
+                <ul>
+                    <li class="nav-blog"><a href="https://jorgenmiller.github.io/blog/">Blog</a></li>
+                    <li class="nav-about"><a href="https://jorgenmiller.github.io/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+
+        
+
+        
+            <a href="https://www.instagram.com/look_at_legos/" target="_blank" rel="noopener"><img class="icon" src="https://jorgenmiller.github.io/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:jorgen.j.miller@gmail.com"><img class="icon" src="https://jorgenmiller.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+            <a href="https://jorgenmiller.github.io/index.xml"><img class="icon" src="https://jorgenmiller.github.io/img/rss.svg" alt="rss" /></a>
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    The Lego XL Motor
+
+</div>
+
+                    <div class="initials"><a href="https://jorgenmiller.github.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Mon Apr 29 2002 00:00:00 UTC'>Apr 29, 2002</div>
+                    
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                <p>Lego&rsquo;s XL Motor has the most mechanical power of all the Lego Power Functions. At 9V, it can deliver about 0.4 of a Newton-metre (N·m), the measurement for torque. One newton-metre is the equal to the torque created by perpendicularly applying one newton of force to a one metre arm able to rotate on one endpoint. The  Lego mindstorms NXT large motor has similar characteristics, as I believe they are similar constructions.</p>
+
+<p><img src="blog_imgs/XLmotor.jpg" alt="the XL motor" />[</p>
+
+<p>All Lego power functions have the same connector with four nodes. The two outer nodes power receivers, and the inner nodes supply power to the motor. The motor will run if it is directly connected to a power supply (no more than 9V) via the inner nodes on the connector.</p>
+
+<p><img src="https://jorgenmiller.github.io/blog_imgs/pfconnector.jpg" alt="the connector for all Lego power functions" /></p>
+
+<p>If you want to take apart an XL motor, for modding or curiosity, the dark gray top must be removed. This requires grinding down the bumps that hold it on.</p>
+
+<p><img src="https://jorgenmiller.github.io/blog_imgs/comparisondeconstruction.jpg" alt="grind down the dark gray bumps that hold the cap" /></p>
+
+<p>Then, pop off the top. Squeezing the sides and pulling will work, but a screw driver can help to remove it easily.</p>
+
+<p><img src="https://jorgenmiller.github.io/blog_imgs/XLdeconstruction.jpg" alt="push it out with a screw driver" /></p>
+
+<p>There is an electric motor and a planetary gear reduction system inside.</p>
+
+<p><img src="https://jorgenmiller.github.io/blog_imgs/XLinsides.jpg" alt="elctric motor and gear reduction and the casing" /></p>
+
+<p>The electric motor inside is what powers the XL motor. The electric motor has capacitors on the bottom that gain energy when the motor is forcefully stopped, and then releases it to turn the motor with more power.</p>
+
+<p><img src="https://jorgenmiller.github.io/blog_imgs/XLelectricmotor.jpg" alt="bottom of electric motor" /></p>
+
+<p>The planetary gear reduction slows the output of the electric motor and gives the whole motor more torque. However, the gearing adds a lot of friction. The motor would spin faster and should be a little bit more efficient without the reduction.</p>
+
+<p><img src="https://jorgenmiller.github.io/blog_imgs/planetary.jpg" alt="the planetary gear reduction system" /></p>
+
+<p>To mod the XL motor, removing the two bumps on the bottom of the planetary casing would allow the whole system to rotate, with a little bit less friction. Another way would be to glue the gears to the carrier and shave off the teeth on the outer side so that the carrier and gears rotate with the motor, but without touching the ring gear in the casing.</p>
+
+<p>Before modding, make sure to have a plan, have the correct tools, and keep in mind that it may fail. With the XL motor, modding will only slightly improve the motor&rsquo;s performance.</p>
+
+<p><a href="http://www.philohome.com/motors/motorcomp.htm">Here is some helpful information and comparisons of Lego motors.</a></p>
+
+                <br>
+                <p><a href="https://jorgenmiller.github.io/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jorgenmiller';
+    var disqus_identifier = 'https:\/\/jorgenmiller.github.io\/blog\/the-lego-xl-motor\/';
+    var disqus_title = 'The Lego XL Motor';
+    var disqus_url = 'https:\/\/jorgenmiller.github.io\/blog\/the-lego-xl-motor\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+</body>
+</html>
+
