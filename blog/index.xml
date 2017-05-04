@@ -15,7 +15,22 @@
       <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://jorgenmiller.github.io/blog/raspberry-pi/</guid>
-      <description>&lt;p&gt;The Raspberry Pi is a common small computer.&lt;/p&gt;
+      <description>&lt;p&gt;The Raspberry Pi 3 is the newest model of raspberry pis, common and small computers. The RPi3 is a little bit smaller than an altoid tin. Here are its specs.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;85.6 mm x 56 mm x 21 mm&lt;/li&gt;
+&lt;li&gt;64-bit quadcore processor&lt;/li&gt;
+&lt;li&gt;1 GB RAM&lt;/li&gt;
+&lt;li&gt;4 USB ports&lt;/li&gt;
+&lt;li&gt;Ethernet &lt;sup&gt;10&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;&lt;/li&gt;
+&lt;li&gt;Bluetooth 4.0&lt;/li&gt;
+&lt;li&gt;802.11n Wireless LAN&lt;/li&gt;
+&lt;li&gt;HDMI and composite video&lt;/li&gt;
+&lt;li&gt;HDMI and headphone audio&lt;/li&gt;
+&lt;li&gt;40 GPIO pins&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When you look at an RPi3, these are the main components you will notice.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/raspberrypidiagram.jpg&#34; alt=&#34;raspberry pi diagram&#34; /&gt;&lt;/p&gt;
 </description>
