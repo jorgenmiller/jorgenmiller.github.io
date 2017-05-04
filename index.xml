@@ -6,8 +6,20 @@
     <description>Recent content on Jørgen Miller</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 17 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 May 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jorgenmiller.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Raspberry Pi</title>
+      <link>https://jorgenmiller.github.io/blog/raspberry-pi/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/raspberry-pi/</guid>
+      <description>&lt;p&gt;The Raspberry Pi is a common small computer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/raspberrypidiagram.jpg&#34; alt=&#34;raspberry pi diagram&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The Lego XL Motor</title>
