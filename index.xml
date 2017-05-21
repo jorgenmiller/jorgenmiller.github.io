@@ -156,5 +156,41 @@
 </description>
     </item>
     
+    <item>
+      <title>Example</title>
+      <link>https://jorgenmiller.github.io/blog/example/</link>
+      <pubDate>Mon, 29 Apr 2002 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/example/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Sunday&lt;/strong&gt;
+- Arrival
+- Pin Exchange
+&lt;strong&gt;Monday&lt;/strong&gt;
+- Communicating your Science
+- Judging at Intel ISEF
+- Protecting your Intellectual Property
+- Opening Ceremony Dinner
+- Opening Ceremony (Derek Muller from Veritasium!)
+&lt;strong&gt;Tuesday&lt;/strong&gt;
+- Los Angeles Science Center
+- Panels
+- Student Mixer
+&lt;strong&gt;Wednesday&lt;/strong&gt;
+- Tour of USC
+- Universal Studios
+&lt;strong&gt;Thursday&lt;/strong&gt;
+- Public Visitation Day
+- Volunteer Observer Tours
+- Special Awards Ceremony
+&lt;strong&gt;Friday&lt;/strong&gt;
+- Grand Awards Ceremony
+- Departure&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Other Activities&lt;/strong&gt;
+- Intel Quad
+- Commons&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
