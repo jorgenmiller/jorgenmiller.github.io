@@ -17,7 +17,9 @@
       <guid>https://jorgenmiller.github.io/blog/the-brickpi-and-motor-control/</guid>
       <description>&lt;p&gt;Here is a python program that I made for the BrickPi. The purpose is to get input from the right joystick and give output with the motors. The speed of motor B is controlled by the x position of the right joystick and the speed of motor c is controlled by the y position of the right joystick. The joysticks give values between 0 and 32,500 It also has the ability to quit the program if the mode button is pressed. On my logitech F310 gamepad, that is the center button labeled logitech.&lt;/p&gt;
 
-&lt;p&gt;The main difficulty I had when trying to make this program was reading the gamepad and instructing the BrickPi simultaneously. The gamepad uses a loop where it waits for an input, but the BrickPi needs to loop to run the motors. The gamepad loop blocks the BrickPi, but this program uses threading to do both.&lt;/p&gt;
+&lt;p&gt;The program uses inputs 0.1 to read the gamepad. Use &lt;code&gt;pip install inputs&lt;/code&gt; to get it. Once installed, &lt;code&gt;get_gamepad()&lt;/code&gt; may work properly, but you may need to edit it. you can find the name of your gamepad by looking in &lt;code&gt;/dev/input&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The main difficulty I had when trying to make this program was reading the gamepad and instructing the BrickPi simultaneously. The gamepad uses a loop where it waits for an input, but the BrickPi needs to loop to run the motors. The gamepad loop normally blocks the BrickPi, but this program uses threading to do both.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from inputs import get_gamepad    #input from gamepad
 from BrickPi import *   #for the BrickPi
@@ -54,6 +56,39 @@ while True:   #BrickPi loop in main thread
     </item>
     
     <item>
+      <title>SSh and Github for the RPi</title>
+      <link>https://jorgenmiller.github.io/blog/ssh-and-github-for-the-rpi/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/ssh-and-github-for-the-rpi/</guid>
+      <description>&lt;p&gt;It is annoying to have to plug in a monitor, keyboard, and mouse to the Raspberry Pi. It is also annoying to not be able to access the files or the RPi from elsewhere. SSH and GitHub can help here.&lt;/p&gt;
+
+&lt;p&gt;SSH allows a Pi to be used remotely. To SSH, first you need the IP address. you can &lt;code&gt;hostname -I&lt;/code&gt; on your Pi to get the IP address. Although it may show a long string of numbers, the IP address should be four numbers separated by periods. For example, &lt;code&gt;173.2.20.192&lt;/code&gt; could be an IP address. Once you have the IP address, use the command &lt;code&gt;ssh &amp;lt;username&amp;gt;@&amp;lt;IP adress&amp;gt;&lt;/code&gt; to connect. The default username is pi. &lt;code&gt;ssh pi@173.2.20.192&lt;/code&gt; could connect to a pi. The first time you connect, it will give you a prompt. Type &lt;code&gt;yes&lt;/code&gt; to continue. Then it will ask for you password on the pi. The default password is raspberry. If you want a graphical application like Idle or Scratch, use &lt;code&gt;ssh -Y &amp;lt;username&amp;gt;@&amp;lt;IP address&amp;gt;&lt;/code&gt;. When you are finished, type &lt;code&gt;exit&lt;/code&gt; to quit the SSH session.&lt;/p&gt;
+
+&lt;p&gt;Github will allow the Pi to push its files to the cloud and allow other devices to later access them. &lt;code&gt;sudo apt install git&lt;/code&gt; to get git, so you can use GitHub. On your pi (or while using SSH) you need to identify who you are.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-unix&#34;&gt;git config --global user.name &amp;quot;&amp;lt;Your name&amp;gt;&amp;quot;
+git config --global user.email &amp;quot;&amp;lt;Your email&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, make sure you are inside the directory you want on GitHub. Use &lt;code&gt;git init&lt;/code&gt; to make it a git repository. &lt;code&gt;ls -a&lt;/code&gt; to check that there is a &lt;code&gt;.git&lt;/code&gt; folder in your directory. To add your files to the repository, &lt;code&gt;git add -A&lt;/code&gt; to add all the files. Then use &lt;code&gt;git commit -m&amp;quot;&amp;lt;commit title&amp;gt;&amp;quot;&lt;/code&gt; to commit the files. Now, make or login to Your GitHub account. make a new repository and give your it a name. Now your repository exists. It will bring you to a setup screen. It will give you commands to use under the &amp;lsquo;push an existing repository&amp;rsquo; section. They will look like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-unix&#34;&gt;git remote add origin (...)
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now if you look on Github, the files in your folder should now be online. You can now use these commands to add your files to GitHub.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-unix&#34;&gt;git add -A
+git push
+git commit -m&amp;quot;&amp;lt;message&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can remotely use a Raspberry Pi with SSH and access a folder of your pi from GitHub.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>The BrickPi</title>
       <link>https://jorgenmiller.github.io/blog/the-brickpi/</link>
       <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
@@ -76,7 +111,7 @@ while True:   #needs to be repeated
   BrickPiUpdateValues()   #update states with the BrickPi
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The commands for sensors are similar. The examples show each command and what kind of  input each sensor has.&lt;/p&gt;
+&lt;p&gt;The commands for sensors are similar. The examples on the SD card show each command and what kind of  input each sensor has.&lt;/p&gt;
 </description>
     </item>
     
