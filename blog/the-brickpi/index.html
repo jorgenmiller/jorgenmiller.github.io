@@ -34,9 +34,9 @@
 
 
     
-    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/reset.css?t=1497537297">
-    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/pygments.css?t=1497537297">
-    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/main.css?t=1497537297">
+    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/reset.css?t=1497554567">
+    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/pygments.css?t=1497554567">
+    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/main.css?t=1497554567">
     
 
 
@@ -119,16 +119,30 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Mon Apr 29 2002 00:00:00 UTC'>Apr 29, 2002</div>
+                    <div class="date" title='Wed Jun 14 2017 00:00:00 UTC'>Jun 14, 2017</div>
                     
                     
                 </div>
             </div>
             <div class="markdown">
-                <p>The BrickPi</p>
+                <p><img src="https://jorgenmiller.github.io/blog_imgs/.jpg" alt="The BrickPi" /></p>
 
-<pre><code>This is code
+<p>The BrickPi is an attachment from Dexter Industries for the Raspberry Pi that allows the Pi to easily use NXT motors and sensors. It can control four NXT motors and get input from four NXT sensors. It fits on top of a Pi and comes with a lego compatible case to protect it and the Pi. The BrickPi can be bought online at <a href="https://www.dexterindustries.com/">DexterIndustries.com</a> and instructions to get the BrickPi SD card iamge can be found <a href="https://www.dexterindustries.com/howto/install-raspbian-for-robots-image-on-an-sd-card/">here</a>.</p>
+
+<p>The BrickPi can be programmed in C, scratch, or python. I chose to use python. The SD card image comes with examples that you can use to learn the BrickPi commands, but here are some of the standard ones used in a program to run a motor.</p>
+
+<pre><code class="language-python">from BrickPi import *   #use the BrickPi
+BrickPiSetup()    #initiate the BrickPi
+
+BrickPi.MotorEnable[PORT_A] = 1   #initiate motor A
+
+BrickPi.MotorSpeed[PORT_A] = 255    #motor A state to max speed
+
+while True:   #needs to be repeated
+  BrickPiUpdateValues()   #update states with the BrickPi
 </code></pre>
+
+<p>The commands for sensors are similar. The examples show each command and what kind of  input each sensor has.</p>
 
                 <br>
                 <p><a href="https://jorgenmiller.github.io/blog/">Back to posts</a></p>

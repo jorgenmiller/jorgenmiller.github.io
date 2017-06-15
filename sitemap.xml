@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jorgenmiller.github.io/blog/the-brickpi-and-motor-control/</loc>
+    <lastmod>2017-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jorgenmiller.github.io/blog/the-brickpi/</loc>
+    <lastmod>2017-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jorgenmiller.github.io/blog/intel-isef-2017/</loc>
     <lastmod>2017-05-21T00:00:00+00:00</lastmod>
   </url>
@@ -32,13 +42,8 @@
   </url>
   
   <url>
-    <loc>https://jorgenmiller.github.io/blog/the-brickpi/</loc>
-    <lastmod>2002-04-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jorgenmiller.github.io/blog/</loc>
-    <lastmod>2017-05-21T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -50,7 +55,7 @@
   
   <url>
     <loc>https://jorgenmiller.github.io/</loc>
-    <lastmod>2017-05-21T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

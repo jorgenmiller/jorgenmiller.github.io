@@ -13,10 +13,10 @@
 <title>
 
 
-     Robotic Arm Three Motor Principle 
+     The BrickPi and Motor Control 
 
 </title>
-<link rel="canonical" href="https://jorgenmiller.github.io/blog/robotic-arm-three-motor-principle/">
+<link rel="canonical" href="https://jorgenmiller.github.io/blog/the-brickpi-and-motor-control/">
 
 
 
@@ -111,7 +111,7 @@
                 <div class="title-container">
                     <div class="page-heading">
 
-    Robotic Arm Three Motor Principle
+    The BrickPi and Motor Control
 
 </div>
 
@@ -119,39 +119,47 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Wed Apr 5 2017 00:00:00 UTC'>Apr 5, 2017</div>
+                    <div class="date" title='Thu Jun 15 2017 00:00:00 UTC'>Jun 15, 2017</div>
                     
                     
                 </div>
             </div>
             <div class="markdown">
-                <p>Robotic Arms are fun to build and can complete many different tasks. For a full three dimensional movement, six controlled joints are required. Usually, they are arranged some what like this.</p>
+                <p>Here is a python program that I made for the BrickPi. The purpose is to get input from the right joystick and give output with the motors. The speed of motor B is controlled by the x position of the right joystick and the speed of motor c is controlled by the y position of the right joystick. The joysticks give values between 0 and 32,500 It also has the ability to quit the program if the mode button is pressed. On my logitech F310 gamepad, that is the center button labeled logitech.</p>
 
-<p><img src="https://jorgenmiller.github.io/blog_imgs/sixmotorarmcontrol.jpg" alt="Six motor control of a robotic arm" /></p>
+<p>The main difficulty I had when trying to make this program was reading the gamepad and instructing the BrickPi simultaneously. The gamepad uses a loop where it waits for an input, but the BrickPi needs to loop to run the motors. The gamepad loop blocks the BrickPi, but this program uses threading to do both.</p>
 
-<p>Six servos can be a lot of motors to control. Sometimes it is excessive. In my Science Fair project in 2017, there was not a need to move upwards. Also, NXT can only support three motors (without brick-to-brick communication). I made a design that requires only three motors to move the end of the arm in a two dimensional plane.</p>
+<pre><code class="language-python">from inputs import get_gamepad    #input from gamepad
+from BrickPi import *   #for the BrickPi
+import threading    #for threading
 
-<p>This Lego arm is controlled by only three motors. This design functions when the arm makes a triangle where</p>
+BrickPiSetup()   #it is always necessary to setup the BrickPi
+BrickPi.MotorEnable[PORT_B] = 1   #enable motor B
+BrickPi.MotorEnable[PORT_C] = 1   #enable motor C
 
-<ul>
-<li>Two side lengths stay the same, but not necessarily equivalent</li>
-<li>the two base angles are free to rotate</li>
-<li>the top angle is controlled by a servo</li>
-</ul>
+quitting = False    #make a variable for quitting
 
-<p>In this triangle, when the top angle is changed, the bottom side of the triangle decreases or increase and the two base angles will also change. The amount that the bottom side changes depends on the lengths of the sides.</p>
+def gamepad():    #make a thread for the gamepad
+    while True:   #stay in the thread
+        for event in get_gamepad():   #wait for user input in list of inputs
+            if event.code == &quot;ABS_RX&quot;:    #right joystick moved (x axis)
+                BrickPi.MotorSpeed[PORT_B] = event.state / 128  #B moves 0-255
+            elif event.code == &quot;ABS_RY&quot;:    #right joystick moved (y axis)
+                BrickPi.MotorSpeed[PORT_C] = event.state / 128  #motor C moves
+            elif event.code == &quot;BTN_MODE&quot;:    #if quit pressed
+                print &quot;quitting&quot;    
+                global quitting   #a global variable
+                quitting = True   #change quitting
+                return    #exit thread
 
-<p>In a robotic Arm, it would look like this.</p>
+gamepad = threading.Thread(target = gamepad)    #simplify name
+gamepad.start()   #start thread
 
-<p><img src="https://jorgenmiller.github.io/blog_imgs/threemotorarmcontrol.jpg" alt="Three motor control of a robotic arm" /></p>
-
-<p>In total, the arm would rotate its base with one motor, extend the end of the arm with another motor, and complete a task (like grabbing an object) with another motor. The arm only uses three motors to move around its area and activate the end effector.</p>
-
-<p>Here is a Lego Arm that I built that functions using this principle.</p>
-
-<p><img src="https://jorgenmiller.github.io/blog_imgs/threemotorarm.jpg" alt="Three motors in a Lego arm" /></p>
-
-<p>This arm only uses three motors and has two joints that are free to rotate.</p>
+while True:   #BrickPi loop in main thread
+    BrickPiUpdateValues()   #update to run motors
+    if quitting == True:    #if quit pressed
+        sys.exit()    #quit
+</code></pre>
 
                 <br>
                 <p><a href="https://jorgenmiller.github.io/blog/">Back to posts</a></p>
@@ -161,9 +169,9 @@
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'jorgenmiller';
-    var disqus_identifier = 'https:\/\/jorgenmiller.github.io\/blog\/robotic-arm-three-motor-principle\/';
-    var disqus_title = 'Robotic Arm Three Motor Principle';
-    var disqus_url = 'https:\/\/jorgenmiller.github.io\/blog\/robotic-arm-three-motor-principle\/';
+    var disqus_identifier = 'https:\/\/jorgenmiller.github.io\/blog\/the-brickpi-and-motor-control\/';
+    var disqus_title = 'The BrickPi and Motor Control';
+    var disqus_url = 'https:\/\/jorgenmiller.github.io\/blog\/the-brickpi-and-motor-control\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

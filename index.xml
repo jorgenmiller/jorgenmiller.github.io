@@ -6,8 +6,79 @@
     <description>Recent content on Jørgen Miller</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 21 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jun 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jorgenmiller.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The BrickPi and Motor Control</title>
+      <link>https://jorgenmiller.github.io/blog/the-brickpi-and-motor-control/</link>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/the-brickpi-and-motor-control/</guid>
+      <description>&lt;p&gt;Here is a python program that I made for the BrickPi. The purpose is to get input from the right joystick and give output with the motors. The speed of motor B is controlled by the x position of the right joystick and the speed of motor c is controlled by the y position of the right joystick. The joysticks give values between 0 and 32,500 It also has the ability to quit the program if the mode button is pressed. On my logitech F310 gamepad, that is the center button labeled logitech.&lt;/p&gt;
+
+&lt;p&gt;The main difficulty I had when trying to make this program was reading the gamepad and instructing the BrickPi simultaneously. The gamepad uses a loop where it waits for an input, but the BrickPi needs to loop to run the motors. The gamepad loop blocks the BrickPi, but this program uses threading to do both.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from inputs import get_gamepad    #input from gamepad
+from BrickPi import *   #for the BrickPi
+import threading    #for threading
+
+BrickPiSetup()   #it is always necessary to setup the BrickPi
+BrickPi.MotorEnable[PORT_B] = 1   #enable motor B
+BrickPi.MotorEnable[PORT_C] = 1   #enable motor C
+
+quitting = False    #make a variable for quitting
+
+def gamepad():    #make a thread for the gamepad
+    while True:   #stay in the thread
+        for event in get_gamepad():   #wait for user input in list of inputs
+            if event.code == &amp;quot;ABS_RX&amp;quot;:    #right joystick moved (x axis)
+                BrickPi.MotorSpeed[PORT_B] = event.state / 128  #B moves 0-255
+            elif event.code == &amp;quot;ABS_RY&amp;quot;:    #right joystick moved (y axis)
+                BrickPi.MotorSpeed[PORT_C] = event.state / 128  #motor C moves
+            elif event.code == &amp;quot;BTN_MODE&amp;quot;:    #if quit pressed
+                print &amp;quot;quitting&amp;quot;    
+                global quitting   #a global variable
+                quitting = True   #change quitting
+                return    #exit thread
+
+gamepad = threading.Thread(target = gamepad)    #simplify name
+gamepad.start()   #start thread
+
+while True:   #BrickPi loop in main thread
+    BrickPiUpdateValues()   #update to run motors
+    if quitting == True:    #if quit pressed
+        sys.exit()    #quit
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The BrickPi</title>
+      <link>https://jorgenmiller.github.io/blog/the-brickpi/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/the-brickpi/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/.jpg&#34; alt=&#34;The BrickPi&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The BrickPi is an attachment from Dexter Industries for the Raspberry Pi that allows the Pi to easily use NXT motors and sensors. It can control four NXT motors and get input from four NXT sensors. It fits on top of a Pi and comes with a lego compatible case to protect it and the Pi. The BrickPi can be bought online at &lt;a href=&#34;https://www.dexterindustries.com/&#34;&gt;DexterIndustries.com&lt;/a&gt; and instructions to get the BrickPi SD card iamge can be found &lt;a href=&#34;https://www.dexterindustries.com/howto/install-raspbian-for-robots-image-on-an-sd-card/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The BrickPi can be programmed in C, scratch, or python. I chose to use python. The SD card image comes with examples that you can use to learn the BrickPi commands, but here are some of the standard ones used in a program to run a motor.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from BrickPi import *   #use the BrickPi
+BrickPiSetup()    #initiate the BrickPi
+
+BrickPi.MotorEnable[PORT_A] = 1   #initiate motor A
+
+BrickPi.MotorSpeed[PORT_A] = 255    #motor A state to max speed
+
+while True:   #needs to be repeated
+  BrickPiUpdateValues()   #update states with the BrickPi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The commands for sensors are similar. The examples show each command and what kind of  input each sensor has.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Intel ISEF 2017</title>
@@ -175,19 +246,6 @@
       <description>&lt;p&gt;I&amp;rsquo;m a kid who builds robots!&lt;/p&gt;
 
 &lt;p&gt;jorgen.j.miller@gmail.com&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The BrickPi</title>
-      <link>https://jorgenmiller.github.io/blog/the-brickpi/</link>
-      <pubDate>Mon, 29 Apr 2002 00:00:00 +0000</pubDate>
-      
-      <guid>https://jorgenmiller.github.io/blog/the-brickpi/</guid>
-      <description>&lt;p&gt;The BrickPi&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;This is code
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
