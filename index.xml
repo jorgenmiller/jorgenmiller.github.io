@@ -178,5 +178,18 @@
 </description>
     </item>
     
+    <item>
+      <title>The BrickPi</title>
+      <link>https://jorgenmiller.github.io/blog/the-brickpi/</link>
+      <pubDate>Mon, 29 Apr 2002 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/the-brickpi/</guid>
+      <description>&lt;p&gt;The BrickPi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;This is code
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
