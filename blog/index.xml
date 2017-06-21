@@ -19,6 +19,8 @@
 
 &lt;p&gt;This Lego car is controlled by a Raspberry Pi with a BrickPi attached. It drives like a tank using joystick input from a USB logitech F310 gamepad. The wheels are directly connected to the Lego NXT motors. It also has &amp;lsquo;suspension&amp;rsquo; because the plastic axles bend a bit. It can drive well on surfaces like gravel because the wheels need to slip as it turns since it drives like a tank.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/offroad_vehicle.gif&#34; alt=&#34;Oforad Vehicle in action&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;The program uses threading to read input from the gamepad and drive the motors at the same time.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from inputs import get_gamepad
