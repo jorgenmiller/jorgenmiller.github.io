@@ -34,9 +34,9 @@
 
 
     
-    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/reset.css?t=1498069203">
-    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/pygments.css?t=1498069203">
-    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/main.css?t=1498069203">
+    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/reset.css?t=1498069724">
+    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/pygments.css?t=1498069724">
+    <link rel="stylesheet" href="https://jorgenmiller.github.io/css/main.css?t=1498069724">
     
 
 
@@ -137,24 +137,24 @@
 from BrickPi import *
 import threading
 
-BrickPiSetup()
-BrickPi.MotorEnable[PORT_A] = 1
+BrickPiSetup()    #enable serial connection with BrickPi
+BrickPi.MotorEnable[PORT_A] = 1   #enable motors
 BrickPi.MotorEnable[PORT_B] = 1
 BrickPi.MotorEnable[PORT_C] = 1
 BrickPi.MotorEnable[PORT_D] = 1
 
-quitting = False
+quitting = False    #make variable quitting
 
-def gamepad():
+def gamepad():    #a thread to read gamepad input
     while True:
         for event in get_gamepad():
-            if event.code == &quot;ABS_Y&quot;:
+            if event.code == &quot;ABS_Y&quot;:   #run motors based on joysticks
                 BrickPi.MotorSpeed[PORT_A] = event.state / -128
                 BrickPi.MotorSpeed[PORT_B] = event.state / 128
             elif event.code == &quot;ABS_RY&quot;:
                 BrickPi.MotorSpeed[PORT_C] = event.state / 128
                 BrickPi.MotorSpeed[PORT_D] = event.state / -128
-            elif event.code == &quot;BTN_MODE&quot;:
+            elif event.code == &quot;BTN_MODE&quot;:    #quit
                 global quitting
                 quitting = True
                 return
@@ -163,9 +163,9 @@ gamepad = threading.Thread(target = gamepad)
 gamepad.start()
 
 while True:
-    BrickPiUpdateValues()
+    BrickPiUpdateValues()   #update to run motors
     if quitting == True:
-        sys.exit()
+        sys.exit()    #full quit
 </code></pre>
 
                 <br>
