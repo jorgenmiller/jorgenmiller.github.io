@@ -6,8 +6,57 @@
     <description>Recent content on Jørgen Miller</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 15 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Jun 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jorgenmiller.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Lego Offroad Vehicle with BrickPi</title>
+      <link>https://jorgenmiller.github.io/blog/lego-offroad-vehicle-with-brickpi/</link>
+      <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/lego-offroad-vehicle-with-brickpi/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/offroad_vehicle.jpg&#34; alt=&#34;A Lego Car&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This Lego car is controlled by a Raspberry Pi with a BrickPi attached. It drives like a tank using joystick input from a USB logitech F310 gamepad. The wheels are directly connected to the Lego NXT motors. It also has &amp;lsquo;suspension&amp;rsquo; because the plastic axles bend a bit. It can drive well on surfaces like gravel because the wheels need to slip as it turns since it drives like a tank.&lt;/p&gt;
+
+&lt;p&gt;The program uses threading to read input from the gamepad and drive the motors at the same time.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from inputs import get_gamepad
+from BrickPi import *
+import threading
+
+BrickPiSetup()
+BrickPi.MotorEnable[PORT_A] = 1
+BrickPi.MotorEnable[PORT_B] = 1
+BrickPi.MotorEnable[PORT_C] = 1
+BrickPi.MotorEnable[PORT_D] = 1
+
+quitting = False
+
+def gamepad():
+    while True:
+        for event in get_gamepad():
+            if event.code == &amp;quot;ABS_Y&amp;quot;:
+                BrickPi.MotorSpeed[PORT_A] = event.state / -128
+                BrickPi.MotorSpeed[PORT_B] = event.state / 128
+            elif event.code == &amp;quot;ABS_RY&amp;quot;:
+                BrickPi.MotorSpeed[PORT_C] = event.state / 128
+                BrickPi.MotorSpeed[PORT_D] = event.state / -128
+            elif event.code == &amp;quot;BTN_MODE&amp;quot;:
+                global quitting
+                quitting = True
+                return
+
+gamepad = threading.Thread(target = gamepad)
+gamepad.start()
+
+while True:
+    BrickPiUpdateValues()
+    if quitting == True:
+        sys.exit()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>The BrickPi and Motor Control</title>
