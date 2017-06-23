@@ -145,7 +145,7 @@ git push
       <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://jorgenmiller.github.io/blog/the-brickpi/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/.jpg&#34; alt=&#34;The BrickPi&#34; /&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/brickpi.jpg&#34; alt=&#34;The BrickPi&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The BrickPi is an attachment from Dexter Industries for the Raspberry Pi that allows the Pi to easily use NXT motors and sensors. It can control four NXT motors and get input from four NXT sensors. It fits on top of a Pi and comes with a lego compatible case to protect it and the Pi. The BrickPi can be bought online at &lt;a href=&#34;https://www.dexterindustries.com/&#34;&gt;DexterIndustries.com&lt;/a&gt; and instructions to get the BrickPi SD card iamge can be found &lt;a href=&#34;https://www.dexterindustries.com/howto/install-raspbian-for-robots-image-on-an-sd-card/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
