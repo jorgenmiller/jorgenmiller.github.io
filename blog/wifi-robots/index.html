@@ -13,10 +13,10 @@
 <title>
 
 
-     The BrickPi 
+     Wifi Robots 
 
 </title>
-<link rel="canonical" href="https://jorgenmiller.github.io/blog/the-brickpi/">
+<link rel="canonical" href="https://jorgenmiller.github.io/blog/wifi-robots/">
 
 
 
@@ -111,7 +111,7 @@
                 <div class="title-container">
                     <div class="page-heading">
 
-    The BrickPi
+    Wifi Robots
 
 </div>
 
@@ -119,30 +119,74 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Wed Jun 14 2017 00:00:00 UTC'>Jun 14, 2017</div>
+                    <div class="date" title='Sat Sep 16 2017 00:00:00 UTC'>Sep 16, 2017</div>
                     
                     
                 </div>
             </div>
             <div class="markdown">
-                <p><img src="https://jorgenmiller.github.io/blog_imgs/brickpi.jpg" alt="The BrickPi" /></p>
+                <p>The last robot I made was the <a href="https://jorgenmiller.github.io/blog/lego-offroad-vehicle-with-brickpi/">Offroad Vehicle</a>. The biggest problem it had was the way it was controlled. I was using a logitech gamepad that had a USB plug. The wired connection limited the usuability, range, and was just annoying. Wireless Logitech gamepads are available for purchase, but why buy something when you have a mobile device? A phone can communicate with a Raspberry Pi over wifi to be used as a controller. This allows a large range, customizable controls, and the option to include a camera to drive your robot without line-of-sight.</p>
 
-<p>The BrickPi is an attachment from Dexter Industries for the Raspberry Pi that allows the Pi to easily use NXT motors and sensors. It can control four NXT motors and get input from four NXT sensors. It fits on top of a Pi and comes with a lego compatible case to protect it and the Pi. The BrickPi can be bought online at <a href="https://www.dexterindustries.com/">DexterIndustries.com</a> and instructions to get the BrickPi SD card iamge can be found <a href="https://www.dexterindustries.com/howto/install-raspbian-for-robots-image-on-an-sd-card/">here</a>.</p>
+<p>I used <a href="https://socket.io/">Sockets</a> to communicate between my iPod and the BrickPi. It is traditionally used to send information between a client and server for things like chat rooms, so it will work great. For a robot and controller, the BrickPi Robot is the server. Whatever device controls it is the client. The client will use a website to send information to the BrickPi. I used <a href="http://surge.sh/">Surge</a> to make a quick website.</p>
 
-<p>The BrickPi can be programmed in C, scratch, or python. I chose to use python. The SD card image comes with examples that you can use to learn the BrickPi commands, but here are some of the standard ones used in a program to run a motor.</p>
+<p>On the website, a bit of html can make a button, and some javascript will send it to the BrickPi. The BrickPi can use python to receive commands and control motors.</p>
 
-<pre><code class="language-python">from BrickPi import *   #use the BrickPi
-BrickPiSetup()    #initiate the BrickPi
+<p>For the front end, this should be included in the html.</p>
 
-BrickPi.MotorEnable[PORT_A] = 1   #initiate motor A
-
-BrickPi.MotorSpeed[PORT_A] = 255    #motor A state to max speed
-
-while True:   #this needs to be repeated
-  BrickPiUpdateValues()   #update states with the BrickPi
+<pre><code class="language-html">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;controller.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 
-<p>The commands for sensors are similar. The examples on the SD card show each command and what kind of  input each sensor has.</p>
+<p>The javascript should specify what IP address it should send to, and what port.</p>
+
+<pre><code class="language-javascript">var socket = io.connect(&quot;&lt;IP address&gt;:&lt;port&gt;&quot;)
+</code></pre>
+
+<p>Using an IP address for local connections only will ensure that no one else can control your Pi. Next, a message on an event should be sent to the pi which can be understood easily.</p>
+
+<pre><code class="language-javascript">socket.emit(&quot;button&quot;, &quot;motor A&quot;, &quot;200&quot;);
+</code></pre>
+
+<p>This can be attached to a button to send when the button is clicked. The python will receive the message using <code>@SocketIO(app)</code>. Here is a full back end that can receive commands for any motor. It also has a message for when a client connects.</p>
+
+<pre><code class="language-python">from flask import Flask, render_template
+from flask_socketio import SocketIO
+from BrickPi import *
+
+BrickPiSetup()
+BrickPi.MotorEnable[PORT_A] = 1
+BrickPi.MotorEnable[PORT_B] = 1
+BrickPi.MotorEnable[PORT_C] = 1
+BrickPi.MotorEnable[PORT_D] = 1
+
+app = Flask(__name__)
+socketio = SocketIO(app)
+
+@socketio.on(&quot;message&quot;)
+def handle_message(message):
+    print(&quot;received message: &quot; + message)
+
+@socketio.on(&quot;button&quot;)
+def handle_button(motor, speed):
+    print(str(motor) + &quot;: &quot; + str(speed))
+    if motor == &quot;motor A&quot;:
+        BrickPi.MotorSpeed[PORT_A] = int(speed)
+    elif motor == &quot;motor B&quot;:
+            BrickPi.MotorSpeed[PORT_B] = int(speed)
+    elif motor == &quot;motor C&quot;:
+            BrickPi.MotorSpeed[PORT_C] = int(speed)
+    elif motor == &quot;motor D&quot;:
+            BrickPi.MotorSpeed[PORT_D] = int(speed)
+    BrickPiUpdateValues()
+    BrickPiUpdateValues()
+
+if __name__ == &quot;__main__&quot;:
+    socketio.run(app,host= &quot;0.0.0.0&quot;)
+</code></pre>
+
+<p>With a complete front end and back end, The pi can be controlled from a mobile device. It can actually be controlled from any device on your wifi.</p>
+
+<p>Check out <a href="https://socket.io/">socket.io</a> for more help and to learn how to use sockets to their full extent!</p>
 
                 <br>
                 <p><a href="https://jorgenmiller.github.io/blog/">Back to posts</a></p>
@@ -152,9 +196,9 @@ while True:   #this needs to be repeated
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'jorgenmiller';
-    var disqus_identifier = 'https:\/\/jorgenmiller.github.io\/blog\/the-brickpi\/';
-    var disqus_title = 'The BrickPi';
-    var disqus_url = 'https:\/\/jorgenmiller.github.io\/blog\/the-brickpi\/';
+    var disqus_identifier = 'https:\/\/jorgenmiller.github.io\/blog\/wifi-robots\/';
+    var disqus_title = 'Wifi Robots';
+    var disqus_url = 'https:\/\/jorgenmiller.github.io\/blog\/wifi-robots\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
