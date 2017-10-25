@@ -6,8 +6,53 @@
     <description>Recent content in Blog on Jørgen Miller</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 16 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jorgenmiller.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The A4 Paper Folding Puzzle</title>
+      <link>https://jorgenmiller.github.io/blog/the-a4-paper-folding-puzzle/</link>
+      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/the-a4-paper-folding-puzzle/</guid>
+      <description>&lt;p&gt;A4 paper in the UK measures 210mm on the short side and 297mm on the longer side. If we call the short side one unit in length, the long side is √(2). It is actually too long by less than a tenth of a millimeter, but let&amp;rsquo;s ignore that. So we have paper with sides 1 and √(2).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic01.jpg&#34; alt=&#34;A4 paper&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To setup the puzzle, we must fold the paper a bit. Fold one of the shorter sides over so it is flush with the longer edge. It should form a triangle. Then, take the corner opposite of the corner that has been turned into a point and fold it to touch the side of the larger triangle. Now, there should be two 45 degree triangles that touch on one side. The first triangle is significantly larger than the second.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic02.jpg&#34; alt=&#34;Fold to make a big 45 degree triangle and a smaller 45 degree triangle&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic03.jpg&#34; alt=&#34;The resulting shape&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, the puzzle. What is the perimeter of this shape that is made?&lt;/p&gt;
+
+&lt;p&gt;I suggest trying to solve it for yourself! When you are done (or if you are just lazy), &lt;a href=&#34;https://jorgenmiller.github.io/blog/the-a4-paper-folding-puzzle-solution&#34;&gt;here is the solution&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The A4 Paper Folding Puzzle Solution</title>
+      <link>https://jorgenmiller.github.io/blog/the-a4-paper-folding-puzzle-solution/</link>
+      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgenmiller.github.io/blog/the-a4-paper-folding-puzzle-solution/</guid>
+      <description>&lt;p&gt;The Solution
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic03.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic04.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic05.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic06.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic07.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic08.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic09.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic10.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic11.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic12.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic13.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic14.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jorgenmiller.github.io/blog_imgs/A4pic15.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Wifi Robots</title>
@@ -24,7 +69,7 @@
 &lt;p&gt;For the front end, this should be included in the html.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script src=&amp;quot;controller.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;&amp;lt;js file&amp;gt;&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The javascript should specify what IP address it should send to, and what port.&lt;/p&gt;
